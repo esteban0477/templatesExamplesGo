@@ -1,0 +1,4 @@
+A person of the family: {{range $people := .}} 
+    - FirstName: {{ConvertToUpper $people.FirstName}}
+      LastName: {{ConvertToLower $people.LastName}}
+      Age: {{$people.Age}} {{end}}
