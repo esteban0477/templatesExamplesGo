@@ -1,9 +1,11 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"text/template"
+	"time"
 )
 
 type person struct {
@@ -45,6 +47,7 @@ func main() {
 		},
 	}
 
+	fmt.Println(time.Now())
 	err = ptrTemplateGlob.ExecuteTemplate(ptrFile, "template1.gohtml", people)
 	if err != nil {
 		log.Panicln(err)
